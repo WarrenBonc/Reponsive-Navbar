@@ -19,6 +19,7 @@ background-color:black;
     background-image: url(img/montaign.jpeg);
 background-position: center;
 height: 100vh;
+backdrop-filter: blur(2px);
 
 }
 
@@ -37,11 +38,12 @@ color: orange;
 header{
 position: relative;
 padding: 0 2rem;
+/* background-color: rgba(58, 54, 54, 0.3); */
 }
 
 .navbar{
 width: 100%;
-height: 60px;
+height: 80px;
 max-width: 1200px;
 margin: 0 auto;
 display: flex;
@@ -54,22 +56,34 @@ justify-content: space-between;
 .togle-button {
     height: 50px;
     width: 50px;
-   
+   border-radius: 10px;
     z-index: 1;
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     position: relative; /* Add this line */
+    display: none;
+    
   }
-  
+  .navlinks{
+display: flex;
+
+  }
+
+  li  {
+padding: 0 20px;
+
+
+  }
   .togle-button .line1,
   .togle-button .line2,
   .togle-button .line3 {
     height: 3px;
     width: 30px;
-    background-color: black;
+    background-color: whitesmoke;
     position: absolute; /* Add this line */
     border-radius: 20px;
     z-index: 2;
+    
   }
   
   .togle-button .line1 {
@@ -88,4 +102,102 @@ justify-content: space-between;
     top: 32px;
     left: 10px;
   
+  }
+
+  .logo a{
+font-size: 35px;
+
+  }
+
+  .action-button{
+background-color: orange;
+padding: 0.5rem 1rem;
+outline: none;
+border: none;
+border-radius: 30px;
+transition: 0.3s;
+font-weight: 700;
+letter-spacing: 2px;
+
+  }
+
+  .action-button:hover{
+transform: scale(0.95);
+background-color: white;
+  }
+
+.menu_deroulant{
+position: absolute;
+right: 2rem;
+top: 70px;
+height: 0;
+width: 300px;
+background-color: rgba(58, 54, 54, 0.3);
+border-radius: 10px;
+overflow: hidden;
+display: none;
+transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.menu_deroulant.open{
+height: 240px;
+
+}
+
+#hero {
+height: calc(600px - 60px);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: white;
+}
+
+#hero h1{
+font-size: 3rem;
+margin-bottom: 1rem;
+
+}
+
+
+  @media(max-width: 830px){
+.navbar .navlinks,
+.navbar .action-button{
+  display: none;
+}
+
+.navbar .togle-button {
+
+  display: block;
+}
+
+.menu_deroulant{
+
+  display: block;
+}
+  }
+  @media(max-width: 570px){
+
+.menu_deroulant{
+left: 2rem;
+width: unset;
+
+}
+
+
+
+  }
+  .menu_deroulant li{
+padding: 0.7rem;
+display: flex;
+align-items: center;
+justify-content: center;
+
+  }
+
+  .menu_deroulant .action-button{
+width: 100%;
+display: flex;
+justify-content: center;
   }

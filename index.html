@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WEBDESIGN MADE BY WARREN</title>
 <link rel="stylesheet" href="style.css">
 
 </head>
@@ -17,26 +17,51 @@
 <li><a href="">SERVICES</a></li>
 <li><a href="">CONTACT</a></li>
 </ul>
-<a href="">GET STARTED</a>
-    <div class="togle-button" onclick="toggle">
+<a href="" class="action-button">GET STARTED</a>
+    <div class="togle-button">
       <span class="line1"></span>
       <span class="line2"></span>
       <span class="line3"></span>
     </div>
 </div>
 
-
+<div class="menu_deroulant">
+    <li><a href="">HOME</a></li>
+    <li><a href="">ABOUT</a></li>
+    <li><a href="">SERVICES</a></li>
+    <li><a href="">CONTACT</a></li>
+    <li><a href="" class="action-button">GET STARTED</a></li>
+</div>
 
 </header>
 
 
+<main>
+<section id="hero">
+<h1>WELCOME</h1>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero,<br> possimus et optio alias nesciunt sunt eveniet 
+    </p>
+</section>
+
+</main>
 
 
 
 
 
 
+<script>
+const toggleBtn = document.querySelector('.togle-button')
 
-<script></script>
+const menuderoulant = document.querySelector('.menu_deroulant')
+
+toggleBtn.onclick = function (){
+
+menuderoulant.classList.toggle('open')
+
+
+
+}
+</script>
 </body>
 </html>
